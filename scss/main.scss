@@ -1,0 +1,232 @@
+$primary-color: #4d8bdd;
+$secondary-color: #b0ccf0;
+$neutral-color: #aaa;
+
+$carousel-image-height: 600px;
+$carousel-nav-button-size: 3rem;
+$carousel-nav-button-color: #cad2d2;
+$carousel-nav-button-text-color: white;
+$carousel-nav-button-border-radius: 100%;
+$carousel-nav-button-transition: all 0.3s ease-in-out;
+$carousel-dots-padding-top: 15px;
+$carousel-arrow-font-size: 70px;
+$carousel-arrow-position: -9px;
+
+$menu-font-size: 10px;
+$icon-font-size: 20px;
+$headline-font-size: 16px;
+$link-font-size: 12px;
+$link-color: #aab2bd;
+
+
+
+$link-color: #aab2bd;
+$link-font-size: 12px;
+$card-bg-color: #efeff5;
+$headline-font-size: 16px;
+$subheadline-font-size: 14px;
+$text-font-size: 12px;
+$img-card-height: 480px;
+
+// SCSS code
+
+
+.section-1 {
+  background-image: linear-gradient(#e8e8ee, #f1f1f7);
+  padding-bottom: 30px;
+}
+
+// main nav
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+
+  .title {
+    position: relative;
+    color: $primary-color;
+
+    &::before {
+      content: "";
+      width: 5.5rem;
+      height: 0.12rem;
+      background-color: $secondary-color;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+
+    .tab {
+      font-size: 12px;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  }
+
+  .search-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .bi-search {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: $neutral-color;
+    }
+
+    .form-control {
+      padding-right: 0px;
+      padding-right: 28px;
+      padding-left: 28px;
+      padding-bottom: 8px;
+      font-size: 12px !important;
+      margin-bottom: -3px;
+      border-radius: 50px;
+    }
+  }
+}
+
+// banner menu
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: $menu-font-size;
+
+    .menu-icon {
+      font-size: $icon-font-size;
+    }
+  }
+}
+
+.headline {
+  font-size: $headline-font-size;
+}
+
+.more-link {
+  font-size: $link-font-size;
+  color: $link-color;
+}
+
+// card section
+
+
+// SCSS code
+.more-link {
+  a {
+    color: $link-color !important;
+    font-size: $link-font-size;
+  }
+}
+
+.card-section {
+  background-color: $card-bg-color;
+  padding: 0px 20px;
+
+  .headline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .headline {
+      font-size: $headline-font-size;
+    }
+  }
+
+  h5 {
+    font-size: $subheadline-font-size;
+  }
+
+  p {
+    font-size: $text-font-size;
+  }
+}
+
+.serial {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.img-card {
+  img {
+    height: $img-card-height;
+    width: 100%;
+  }
+}
+
+
+
+// SCSS code
+.owl-carousel {
+  .owl-item img {
+    height: $carousel-image-height;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .owl-nav {
+    text-align: center;
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: $carousel-nav-button-size;
+      width: $carousel-nav-button-size;
+      background-color: $carousel-nav-button-color !important;
+      color: $carousel-nav-button-text-color;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      border-radius: $carousel-nav-button-border-radius !important;
+      transition: $carousel-nav-button-transition;
+
+      &.owl-prev {
+        left: 0;
+      }
+
+      &.owl-next {
+        right: 0;
+      }
+
+      span {
+        font-size: $carousel-arrow-font-size;
+        position: relative;
+        top: $carousel-arrow-position;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+    padding-top: $carousel-dots-padding-top;
+  }
+}
